@@ -4,7 +4,7 @@ module perceptron (
     input  wire       clk,       // clock
     input  wire       reset,     // reset_n - low to reset
     input  wire[7:0]  in,        // perceptron inputs
-    input  wire       exp_res    // expected result
+    input  wire       exp_res,    // expected result
     output wire       result     // actual result of perceptron calculation
 );
     reg[7:0] weights;
@@ -20,7 +20,6 @@ module perceptron (
         end else begin
             result <= (net_input >= act_thresh); // evaluate perceptron
         end
-
     end
 
     assign net_input = in*wt; // multiply inputs with corresponding weights
