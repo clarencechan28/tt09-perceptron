@@ -1,6 +1,6 @@
 `default_nettype none
 
-module =perceptron (
+module perceptron (
     input  wire       clk,       // clock
     input  wire       reset,     // reset_n - low to reset
     input  wire[7:0]  in,        // perceptron inputs

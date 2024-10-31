@@ -13,8 +13,8 @@ Single layer perceptron classifier
 
 ## How to test
 
-Explain how to use your project
+Just do it.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+N/A
