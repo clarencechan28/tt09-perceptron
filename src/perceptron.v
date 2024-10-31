@@ -7,7 +7,7 @@ module perceptron (
     input  wire       exp_res,    // expected result
     output wire       result     // actual result of perceptron calculation
 );
-    reg[7:0] weights;
+    reg[63:0] weights;
     reg[15:0] act_thresh; // step function activation
     wire[15:0] net_input;
     reg error;
@@ -22,6 +22,12 @@ module perceptron (
         end
     end
 
-    assign net_input = in*wt; // multiply inputs with corresponding weights
+    integer i;
+
+    for (i = 0; i < 8; i = i + 1) // based on 8 inputs
+    begin
+        integer w = 8 * i;
+        net_input <= net_input + in[i] * weights[w+7:w]; // multiply inputs with corresponding weights
+    end
 
 endmodule

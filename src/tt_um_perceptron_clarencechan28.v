@@ -21,9 +21,9 @@ module tt_um_perceptron_clarencechan28 (
   assign uio_oe  = 1;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, uio_in, 1'b0};
+  wire _unused = &{ena, uio_in[7:1], 1'b0};
 
   // instantiate perceptron network
-  perceptron pcptrn1 (.in(ui_in), .result(uo_out[0]), .clk(clk), .reset(rst_n));
+  perceptron pcptrn1 (.in(ui_in), .exp_res(uio_in[0]), .result(uo_out[0]), .clk(clk), .reset(rst_n));
 
 endmodule
