@@ -18,7 +18,9 @@ module perceptron (
             result <= 0;
             net_input <= 0;
             loss <= 8'b0;
-            weights <= {7{8'b0}}; //temp
+            for (i = 0; i < 7; i = i + 1) begin
+                weights[i] <= 8'b0;
+            end
         end else begin
             // evaluate perceptron
             reg[7:0] net_input_tmp;
