@@ -8,7 +8,7 @@ module perceptron (
     input  wire       exp_res,   // expected result 
     output wire[1:0]  result     // actual result of perceptron calculation
 );
-    reg[7:0] weights [0:6]; // 8 8-bit weights
+    reg[7:0] weights [0:6]; // 7 8-bit weights
     reg[7:0] net_input;
     reg[7:0] loss;
     integer i;
@@ -18,7 +18,7 @@ module perceptron (
             result <= 0;
             net_input <= 0;
             loss <= 8'b0;
-            weights <= {8{8'b0}}; //temp
+            weights <= {7{8'b0}}; //temp
         end else begin
             // evaluate perceptron
             reg[7:0] net_input_tmp;
