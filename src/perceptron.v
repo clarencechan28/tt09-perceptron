@@ -11,11 +11,12 @@ module perceptron (
     reg[7:0] weights [0:6]; // 7 8-bit weights
     reg[7:0] net_input;
     reg[7:0] loss;
+    reg[2:0] res_tmp;
     integer i;
 
     always @(posedge clk) begin
         if (!reset) begin
-            result <= 0;
+            res_tmp <= 0;
             net_input <= 0;
             loss <= 8'b0;
             for (i = 0; i < 7; i = i + 1) begin
@@ -31,9 +32,9 @@ module perceptron (
             net_input <= net_input_tmp;
             
             if (net_input < threshold) begin
-                result <= 2'b11; // -1
+                res_tmp <= 2'b11; // -1
             end else begin
-                result <= 2'b01; // +1
+                res_tmp <= 2'b01; // +1
             end
 
             // loss calculation == max(0, -exp_res*result)
@@ -47,5 +48,7 @@ module perceptron (
             end
         end
     end
+
+    assign result = res_tmp;
 
 endmodule
