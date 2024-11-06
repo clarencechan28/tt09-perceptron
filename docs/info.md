@@ -9,11 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Single layer perceptron classifier
+Given an input current, the leaky integrate and fire neuron will determine whether to output a spike, typically for the next neuron in the network.
 
 ## How to test
 
-Just do it.
+Initialize inputs and expected output in test.py, then run `make` in the test subdirectory.
 
 ## External hardware
 
