@@ -5,8 +5,6 @@ runs
 tt_submission
 src/user_config.json
 src/config_merged.json
-src/tt_um_perceptron_clarencechan28.v
-src/perceptron.v
 test/sim_build
 test/__pycache__/
 test/results.xml
