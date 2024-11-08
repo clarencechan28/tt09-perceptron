@@ -3,7 +3,7 @@ project:
   title:        "Perceptron"      # Project title
   author:       "Clarence Chan"      # Your name
   discord:      "clrnz"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Hardware implementation of a simple perceptron"      # One line description of what your project does
+  description:  "Hardware implementation of a single layer perceptron"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -11,7 +11,7 @@ project:
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_perceptron_clarencechan28"
+  top_module:  "tt_um_lif_clarencechan28"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
@@ -42,14 +42,14 @@ pinout:
   uo[6]: ""
   uo[7]: ""
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "Weight bit 1"
+  uio[1]: "Weight bit 2"
+  uio[2]: "Weight bit 3"
+  uio[3]: "Weight bit 4"
+  uio[4]: "Weight bit 5"
+  uio[5]: "Weight bit 6"
+  uio[6]: "Weight bit 7"
+  uio[7]: "Weight bit 8"
 
 # Do not change!
 yaml_version: 6
